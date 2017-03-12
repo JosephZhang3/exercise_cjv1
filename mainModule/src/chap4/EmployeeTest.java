@@ -36,6 +36,8 @@ class Employee {
     private String name;
     private double salary;
     private Date hireday;
+    //The final instance field must be evaluated initial value.不可更改的实例域必须被赋予初始值。
+    private final String birthday = "1994-04-08 00:00:00";
 
     /**
      * @param n     the employ's name
@@ -66,7 +68,7 @@ class Employee {
 
     public Date getHireday() {
 //        return this.hireday;
-        //如果需要返回一个可变对象的引用，应该首先对它进行克隆clone。否则，对返回的引用进行一些操作可能会无意中改变被引用的对象。
+        //如果需要返回一个可变对象的引用，应该首先对它进行克隆clone。否则，对返回的引用进行一些操作可能会导致无意中改变被引用的对象。
         return (Date) this.hireday.clone();
     }
 

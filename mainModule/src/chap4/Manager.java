@@ -1,4 +1,4 @@
-package inherit;
+package chap4;
 
 /**
  * Created by zhangjianghao on 2016/1/12.

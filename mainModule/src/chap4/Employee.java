@@ -1,4 +1,4 @@
-package inherit;
+package chap4;
 
 import java.util.*;
 

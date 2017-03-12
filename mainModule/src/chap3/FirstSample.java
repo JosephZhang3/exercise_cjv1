@@ -1,8 +1,6 @@
-package basic;
+package chap3;
 
-import java.io.Console;
 import java.util.Date;
-import java.util.Scanner;
 
 public class FirstSample {
 

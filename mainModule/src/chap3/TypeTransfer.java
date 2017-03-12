@@ -1,12 +1,12 @@
-package basic;
+package chap3;
 
 public class TypeTransfer {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// 将字符串转换为基本数据类型
 		System.out.println(Integer.parseInt("12"));
 		System.out.println(Integer.valueOf("34"));
+
 		// 将基本数据类型转换为字符串
 		int num = 1234;
 		String str = String.valueOf(num);

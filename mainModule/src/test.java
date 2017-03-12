@@ -3,7 +3,8 @@
  * just for test.
  */
 public class test {
-    public static void main(String[] args){
-        System.out.println("test succ!");
+    public static void main(String[] args) {
+        System.out.println("test success!");
+
     }
 }

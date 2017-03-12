@@ -24,10 +24,10 @@ public class EmployeeTest {
 
         Date d = harry.getHireday();
         double oneYearInMilliSeconds = 365.25 * 24 * 60 * 60 * 1000;
-        //Let's give harry one year of added seniority(资历).让哈利的入职时间提前一年。
+        //Let's give harry one year of added seniority(资历).让哈利的入职时间提前一年（显然这么做是违规的）。
         d.setTime(d.getTime() - (long) oneYearInMilliSeconds);
-        //when haven't used clone() for 'hireday' instance field,print out unexpected result 'Mon Aug 08 18:00:00 CST 2016'
-        //when use,print out right result 'Wed Aug 09 00:00:00 CST 2017',we don't want to change object harry at all!
+        //when we haven't used clone() for 'hireday' instance field,print out unexpected result 'Mon Aug 08 18:00:00 CST 2016'
+        //when we use,print out right result 'Wed Aug 09 00:00:00 CST 2017',we don't want to change object harry at all!
         System.out.println(harry.getHireday());
     }
 }

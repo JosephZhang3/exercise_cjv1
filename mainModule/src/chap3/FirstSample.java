@@ -5,7 +5,6 @@ import java.util.Date;
 public class FirstSample {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		/*
 		System.out.println(0x1.0p-3);// 使用16进制表示浮点数 why it is this result?????
 		System.out.println(0.125);

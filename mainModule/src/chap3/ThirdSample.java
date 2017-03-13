@@ -6,7 +6,6 @@ public class ThirdSample {
 
 	enum Size {SMALL,MEDIUM,LARGE,EXTRA_LARGE};
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		/*
 		// 控制流程，else子句与最邻近的if构成一组
 		int x = 0;

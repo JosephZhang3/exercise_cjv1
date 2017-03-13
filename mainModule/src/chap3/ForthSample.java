@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class ForthSample {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] array = new int[10];
 		// 创建一个数字数组时，所有的元素都被初始化为0
 		System.out.println(array[5]);

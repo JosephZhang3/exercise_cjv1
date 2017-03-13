@@ -9,7 +9,6 @@ public class SecondSample {
 
 	public static void main(String[] args) {
 
-		// TODO Auto-generated method stub
 		// 对文件进行读取
 		Scanner in = null;
 		try {
@@ -20,7 +19,6 @@ public class SecondSample {
 				}
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			in.close();

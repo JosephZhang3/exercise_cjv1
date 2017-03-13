@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class LearnObject {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// PrintStream类的设计者并没有覆盖Object类的toString方法
 		System.out.println(System.out);
 

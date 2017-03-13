@@ -47,7 +47,6 @@ import org.w3c.dom.Text;
 public class DomTreeViewer {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				JFrame frame = new DOMTreeFrame();
@@ -85,7 +84,6 @@ class DOMTreeFrame extends JFrame {
 		openItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
 				openFile();
 			}
 		});
@@ -95,7 +93,6 @@ class DOMTreeFrame extends JFrame {
 		exitItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
 				System.exit(0);
 			}
 		});
@@ -110,7 +107,6 @@ class DOMTreeFrame extends JFrame {
 	 * open a file and load the document.
 	 */
 	private void openFile() {
-		// TODO Auto-generated method stub
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(new File("dom"));
 
@@ -118,13 +114,11 @@ class DOMTreeFrame extends JFrame {
 
 			@Override
 			public String getDescription() {
-				// TODO Auto-generated method stub
 				return "XML files";
 			}
 
 			@Override
 			public boolean accept(File f) {
-				// TODO Auto-generated method stub
 				return f.isDirectory() || f.getName().toLowerCase().endsWith(".xml");
 			}
 		});
@@ -139,7 +133,6 @@ class DOMTreeFrame extends JFrame {
 
 			@Override
 			protected Document doInBackground() throws Exception {
-				// TODO Auto-generated method stub
 				if (documentBuilder == null) {
 					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 					documentBuilder = factory.newDocumentBuilder();
@@ -175,7 +168,6 @@ class DOMTreeModel implements TreeModel {
 
 	@Override
 	public void addTreeModelListener(TreeModelListener arg0) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -206,26 +198,22 @@ class DOMTreeModel implements TreeModel {
 
 	@Override
 	public Object getRoot() {
-		// TODO Auto-generated method stub
 		return doc.getDocumentElement();
 	}
 
 	@Override
 	// 是否已经是叶了（不会再有分岔）
 	public boolean isLeaf(Object node) {
-		// TODO Auto-generated method stub
 		return getChildCount(node) == 0;
 	}
 
 	@Override
 	public void removeTreeModelListener(TreeModelListener arg0) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void valueForPathChanged(TreePath arg0, Object arg1) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -268,7 +256,6 @@ class DOMTreeCellRenderer extends DefaultTreeCellRenderer {
 
 			@Override
 			public int getColumnCount() {
-				// TODO Auto-generated method stub
 				return 2;
 			}
 		}));

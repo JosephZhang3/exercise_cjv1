@@ -8,7 +8,6 @@ public class TextInputAndOutput {
 
 	// 文本输入与输出
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//以文本格式打印数字
 		try {
 			PrintWriter pwOut = new PrintWriter("C:\\test.txt");
@@ -16,7 +15,6 @@ public class TextInputAndOutput {
 			pwOut.println(salary);
 			pwOut.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class SixthSample {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// args 命令行参数数组
 //		if ("first".equals(args[0])) {
 //			System.out.println("the first arg");

@@ -12,7 +12,6 @@ import java.util.zip.ZipInputStream;
 public class AssociationStreamFilter {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String separator = java.io.File.separator;
 		// 使用程序所运行平台的文件分隔符
 		String url = "C:" + separator + "test.txt";
@@ -80,7 +79,6 @@ public class AssociationStreamFilter {
 			}
 			dain.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -99,7 +97,6 @@ public class AssociationStreamFilter {
 			}
 			dins.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

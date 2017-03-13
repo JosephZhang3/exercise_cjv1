@@ -14,7 +14,6 @@ import java.util.Locale;
 public class SeventhSample {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub 
 		// 使用日历类
 		GregorianCalendar calendar = new GregorianCalendar(2015, Calendar.JULY, 7);
 		int month = calendar.get(calendar.MONTH);

@@ -3,6 +3,7 @@ import java.util.Date;
 /**
  * Created by Administrator on 2016/11/30.
  * just for test.
+ * Project git root path:   /c/Users/JianghaoZhang/IdeaProjects/exercise_cjv1
  */
 public class test {
     public static void main(String[] args) {

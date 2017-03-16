@@ -21,29 +21,29 @@ public class StaticTest {
         //System.out.print(Math.pow(5, 3));//output 125.0
 
 
-        Employer[] staff = new Employer[3];
-        staff[0] = new Employer("Tom", 4200);
-        staff[1] = new Employer("Dick", 6700);
-        staff[2] = new Employer("Benne", 11000);
+        Worker[] staff = new Worker[3];
+        staff[0] = new Worker("Tom", 4200);
+        staff[1] = new Worker("Dick", 6700);
+        staff[2] = new Worker("Benne", 11000);
 
-        for (Employer e : staff) {
+        for (Worker e : staff) {
             e.setId();
             System.out.println("name=" + e.getName() + ",id=" + e.getId() + ",salary=" + e.getSalary());
             //calls static method.
             //一般情况下，我们建议使用类名访问类的静态域或调用类的静态方法而不是通过对象
-            System.out.println("The next available id is " + Employer.getNextId());//output  2  3  4
+            System.out.println("The next available id is " + Worker.getNextId());//output  2  3  4
         }
     }
 }
 
-class Employer {
+class Worker {
     private static int nextId = 1;
 
     private String name;
     private double salary;
     private int id;
 
-    public Employer(String n, double s) {
+    public Worker(String n, double s) {
         this.name = n;
         this.salary = s;
         this.id = 0;//0只是一个随便给的预置的初始值，每次调用setId()时都不会起任何作用。
@@ -80,7 +80,7 @@ class Employer {
 
     //unit test.
     public static void main(String[] args) {
-        Employer e = new Employer("Harry", 5000);
+        Worker e = new Worker("Harry", 5000);
         System.out.println(e.getName() + "  " + e.getSalary());
     }
 }

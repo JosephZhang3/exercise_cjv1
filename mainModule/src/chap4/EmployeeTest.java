@@ -59,17 +59,17 @@ class Employee {
      * 实际项目中以防万一使用无参或者少参的构造器，最好还是加上
      */
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public double getSalary() {
-        return this.salary;
+        return salary;
     }
 
     public Date getHireday() {
-//        return this.hireday;
+//        return hireday;
         //如果需要返回一个可变对象的引用，应该首先对它进行克隆clone。否则，对返回的引用进行一些操作可能会导致无意中改变被引用的对象。
-        return (Date) this.hireday.clone();
+        return (Date) hireday.clone();
     }
 
     public void raiseSalary(double byPercent) {

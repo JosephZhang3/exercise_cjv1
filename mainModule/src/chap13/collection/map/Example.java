@@ -1,4 +1,4 @@
-package collection.map;
+package chap13.collection.map;
 
 public class Example {
 	private String myid;

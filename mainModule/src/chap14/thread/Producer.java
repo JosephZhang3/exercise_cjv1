@@ -1,4 +1,4 @@
-package thread;
+package chap14.thread;
 
 public class Producer extends Thread
 {

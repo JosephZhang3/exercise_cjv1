@@ -1,4 +1,4 @@
-package thread;
+package chap14.thread;
 
 public class Customer extends Thread {
 	// 每次消费的产品数量

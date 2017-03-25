@@ -1,8 +1,5 @@
 package chap4;
 
-/**
- * Created by Administrator on 2016/1/12.
- */
 public class ManagerTest {
     public static void main(String[] args) {
         Manager boss = new Manager("jack", 3500, 1992, 10, 30);
@@ -29,3 +26,25 @@ public class ManagerTest {
         //name:cindy	hireday:Sun Jul 02 00:00:00 CST 1995	salary:3300.0000000000005
     }
 }
+class Manager extends Employee {
+    private double bonus;
+
+    /**
+     * @param n the employ's name
+     * @param s the employ' salary
+     */
+    public Manager(String n, double s, int year, int month, int day) {
+        super(n, s, year, month, day);
+        this.bonus = 0;
+    }
+
+    public void setBonus(double b) {
+        this.bonus = b;
+    }
+
+    //这里需要覆盖父类的getSalary()方法，因为给子类计算工资要考虑到奖金的因素
+    public double getSalary() {
+        return super.getSalary() + this.bonus;
+    }
+}
+

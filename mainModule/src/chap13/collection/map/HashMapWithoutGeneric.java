@@ -1,8 +1,8 @@
-package collection.map;
+package chap13.collection.map;
 
 import java.util.*;
 
-public class NoUseFanxingHashMap {
+public class HashMapWithoutGeneric {
 	public static void main(String[] args) {
 		Map hmDemo = new HashMap();
 		// 添加数据

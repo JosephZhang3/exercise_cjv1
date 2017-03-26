@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * @author JianghaoZhang
- * @date 3/16/2017
+ *         date 3/16/2017
  */
 public class ConstructorTest {
     public static void main(String[] args) {

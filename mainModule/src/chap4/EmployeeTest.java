@@ -4,7 +4,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * Created by JianghaoZhang on 3/12/2017.
+ * @author JianghaoZhang
+ *         date 3/12/2017.
  */
 public class EmployeeTest {
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package chap4;
 
 /**
  * @author JianghaoZhang
- * @date 3/12/2017
+ *         date 3/12/2017
  */
 public class StaticTest {
     public static void main(String[] args) {

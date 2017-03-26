@@ -1,9 +1,10 @@
 package chap4;
 
 /**
- * @author JianghaoZhang
- * @date 3/13/2017
  * This program demonstrates parameter passing in Java.（参数传递方式：按值传递）
+ *
+ * @author JianghaoZhang
+ *         date 3/13/2017
  */
 public class ParamTest {
     public static void main(String[] args) {

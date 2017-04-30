@@ -1,4 +1,6 @@
-package chap4;
+package chap5;
+
+import chap4.Employee;
 
 public class ManagerTest {
     public static void main(String[] args) {
@@ -26,6 +28,7 @@ public class ManagerTest {
         //name:cindy	hireday:Sun Jul 02 00:00:00 CST 1995	salary:3300.0000000000005
     }
 }
+
 class Manager extends Employee {
     private double bonus;
 

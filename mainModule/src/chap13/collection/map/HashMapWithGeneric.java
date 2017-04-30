@@ -2,7 +2,7 @@ package chap13.collection.map;
 
 import java.util.*;
 
-public class UseFanXingHashMap {
+public class HashMapWithGeneric {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();
 		Example first = new Example("001", "赵");

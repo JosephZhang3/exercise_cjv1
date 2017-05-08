@@ -26,6 +26,7 @@ public class ManagerTest {
 
         //控制台打印出了下面的数据,试着找出出现这样的salary的计算精度的原因
         //name:cindy	hireday:Sun Jul 02 00:00:00 CST 1995	salary:3300.0000000000005
+        //额，int类型与double类型的值相乘，运算规则可能跟严格的数学不同~
     }
 }
 
@@ -45,9 +46,8 @@ class Manager extends Employee {
         this.bonus = b;
     }
 
-    //这里需要覆盖父类的getSalary()方法，因为给子类计算工资要考虑到奖金的因素
+    //这里需要覆盖父类（职员类）的getSalary()方法，因为给子类（经理类）计算工资要考虑到奖金的因素
     public double getSalary() {
         return super.getSalary() + this.bonus;
     }
 }
-

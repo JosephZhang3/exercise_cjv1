@@ -15,8 +15,6 @@ public class TypeTransfer {
 		int num2 = 5678;
 		String str2 = "" + num2;
 		System.out.println(str2);
-
-		//用递归实现字符串反转
 	}
 
 }

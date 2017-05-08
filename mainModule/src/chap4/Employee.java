@@ -8,11 +8,11 @@ import java.util.GregorianCalendar;
  * @date 4/5/2017
  */
 public class Employee {
+    //The final instance field must be evaluated initial value.不可更改的实例域必须被赋予初始值。
+    private final String birthday = "1994-04-08 00:00:00";
     private String name;
     private double salary;
     private Date hireday;
-    //The final instance field must be evaluated initial value.不可更改的实例域必须被赋予初始值。
-    private final String birthday = "1994-04-08 00:00:00";
 
     /**
      * @param n     the employ's name

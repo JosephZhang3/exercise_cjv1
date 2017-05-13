@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class SecondSample {
+public class FileIo {
 
 	public static void main(String[] args) {
 

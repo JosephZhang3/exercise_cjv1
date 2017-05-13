@@ -2,7 +2,7 @@ package chap3;
 
 import java.util.Scanner;
 
-public class ThirdSample {
+public class ControlStatement {
 
 	enum Size {SMALL,MEDIUM,LARGE,EXTRA_LARGE};
 	public static void main(String[] args) {

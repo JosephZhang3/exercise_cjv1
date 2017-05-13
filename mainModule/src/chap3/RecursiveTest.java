@@ -1,6 +1,6 @@
 package chap3;
 
-public class FifthSample {
+public class RecursiveTest {
 
     public static void main(String[] args) {
         printOut(76534);

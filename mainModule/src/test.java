@@ -10,8 +10,5 @@ import java.util.Date;
 public class test {
     public static void main(String[] args) {
         System.out.println("test success!");
-        System.out.println(new Date());
-        String s=new Date().toString();
-        System.out.println(s);
     }
 }

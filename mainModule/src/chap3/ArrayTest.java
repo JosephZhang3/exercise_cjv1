@@ -2,13 +2,12 @@ package chap3;
 
 import java.util.Arrays;
 
-public class ForthSample {
+public class ArrayTest {
 
 	public static void main(String[] args) {
 		int[] array = new int[10];
 		// 创建一个数字数组时，所有的元素都被初始化为0
 		System.out.println(array[5]);
-
 		for (int i = 0; i < 10; i++) {
 			array[i] = i;
 		}

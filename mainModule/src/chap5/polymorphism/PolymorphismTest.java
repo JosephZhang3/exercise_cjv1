@@ -1,8 +1,10 @@
-package chap5;
+package chap5.polymorphism;
 
-import chap4.Employee;
-
-public class ManagerTest {
+/**
+ * 测试继承和多态（polymorphism）特性
+ * Created by Jianghao Zhang on 2017/5/13.
+ */
+public class PolymorphismTest {
     public static void main(String[] args) {
         Manager boss = new Manager("jack", 3500, 1992, 10, 30);
         Employee[] staff = new Employee[3];
@@ -27,27 +29,5 @@ public class ManagerTest {
         //控制台打印出了下面的数据,试着找出出现这样的salary的计算精度的原因
         //name:cindy	hireday:Sun Jul 02 00:00:00 CST 1995	salary:3300.0000000000005
         //额，int类型与double类型的值相乘，运算规则可能跟严格的数学不同~
-    }
-}
-
-class Manager extends Employee {
-    private double bonus;
-
-    /**
-     * @param n the employ's name
-     * @param s the employ' salary
-     */
-    public Manager(String n, double s, int year, int month, int day) {
-        super(n, s, year, month, day);
-        this.bonus = 0;
-    }
-
-    public void setBonus(double b) {
-        this.bonus = b;
-    }
-
-    //这里需要覆盖父类（职员类）的getSalary()方法，因为给子类（经理类）计算工资要考虑到奖金的因素
-    public double getSalary() {
-        return super.getSalary() + this.bonus;
     }
 }

@@ -1,7 +1,7 @@
 package chap4;
 
 /**
- * This program demonstrates parameter passing in Java.（参数传递方式：按值传递）
+ * Java语言中的参数传递方式：按值传递
  *
  * @author JianghaoZhang
  *         date 3/13/2017

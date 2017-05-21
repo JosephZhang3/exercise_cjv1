@@ -48,11 +48,11 @@ class Employee {
      * @param day   the employ's hire day
      */
     public Employee(String n, double s, int year, int month, int day) {
-        this.name = n;
-        this.salary = s;
+        name = n;
+        salary = s;
         GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
 //        System.out.println(calendar.toString());
-        this.hireday = calendar.getTime();
+        hireday = calendar.getTime();
     }
 
     /**

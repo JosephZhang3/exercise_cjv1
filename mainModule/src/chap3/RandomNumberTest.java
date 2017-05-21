@@ -2,7 +2,7 @@ package chap3;
 
 import java.util.Arrays;
 
-public class SixthSample {
+public class RandomNumberTest {
 
 	public static void main(String[] args) {
 		// args 命令行参数数组

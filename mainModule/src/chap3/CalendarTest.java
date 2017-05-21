@@ -11,7 +11,7 @@ import java.util.Locale;
  *@version 1.0
  */
 
-public class SeventhSample {
+public class CalendarTest {
 
 	public static void main(String[] args) {
 		// 使用日历类

@@ -17,15 +17,20 @@ public class StaticInnerClassTest {
 }
 
 class ArrayAlg {
+    /**
+     * 计算一个由double基本类型构成的数组的最小值和最大值
+     * @param values 双精度浮点型数组
+     * @return Pair对象，包装两个double型数字，第一个数字是最小值，第二个数字是最大值
+     */
     public static Pair calcMinAndMax(double[] values) {
         double min = Double.MAX_VALUE;
         double max = Double.MIN_VALUE;
         for (double v : values) {
             if (min > v) {
-                min = v;
+                min = v;//赋值次数越多，min值越小
             }
             if (max < v) {
-                max = v;
+                max = v;//赋值次数越多，max值越大
             }
         }
         return new Pair(min, max);

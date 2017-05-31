@@ -30,7 +30,7 @@ class TalkingClock {
     }
 
     public void start() {
-        //实际上编译器处理过程中将对外部类的对象的引用传递给了内部类的构造器
+        //实际上,编译器处理过程中将对外部类的对象的引用传递给了内部类的构造器
         ActionListener listener = new TimePrinter();
         Timer t = new Timer(interval, listener);
         t.start();
@@ -43,6 +43,7 @@ class TalkingClock {
             //内部类对象可以直接访问外部类对象的私有域，语句被编译后实际上类似  if(talkingClock.beep)
             if (beep) {
                 Toolkit.getDefaultToolkit().beep();
+                System.out.println("beeped one time!");
             }
         }
     }

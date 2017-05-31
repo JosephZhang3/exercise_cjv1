@@ -29,6 +29,7 @@ class TalkingClock2 {
                 System.out.println("At the tone,the time is " + now);
                 if (beep) {
                     Toolkit.getDefaultToolkit().beep();
+                    System.out.println("beeped one time!");
                 }
             }
         };

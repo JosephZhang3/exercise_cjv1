@@ -1,4 +1,4 @@
-package chap14.thread;
+package chap14.customer_producer_problem;
 
 public class Producer extends Thread
 {

@@ -85,7 +85,7 @@ public class ControlStatement {
 		}
 
 
-		//倒计数循，从10到0
+		//倒数循环，从10到0
 		for(int m = 10;m>=0;m--){
 			System.out.println("now countdown is:"+m);
 		}

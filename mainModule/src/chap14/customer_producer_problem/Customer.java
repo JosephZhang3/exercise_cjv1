@@ -1,4 +1,4 @@
-package chap14.thread;
+package chap14.customer_producer_problem;
 
 public class Customer extends Thread {
 	// 每次消费的产品数量

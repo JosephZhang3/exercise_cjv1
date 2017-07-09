@@ -19,6 +19,7 @@ public class StaticInnerClassTest {
 class ArrayAlg {
     /**
      * 计算一个由double基本类型构成的数组的最小值和最大值
+     *
      * @param values 双精度浮点型数组
      * @return Pair对象，包装两个double型数字，第一个数字是最小值，第二个数字是最大值
      */
@@ -33,7 +34,7 @@ class ArrayAlg {
                 max = v;//赋值次数越多，max值越大
             }
         }
-        return new Pair(min, max);
+        return new Pair(min, max);//内部类对象是在static方法中构造的，所以内部类必须被声明为static
     }
 
     public static class Pair {//公共静态内部类

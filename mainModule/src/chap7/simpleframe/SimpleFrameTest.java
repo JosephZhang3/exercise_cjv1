@@ -13,9 +13,14 @@ public class SimpleFrameTest {
             @Override
             public void run() {
                 SimpleFrame sf = new SimpleFrame();
-                sf.setLocation(220, 110);//重新定义组件位置【相对于整个显示器屏幕】 x,y
-                sf.setBounds(440, 220, 500, 400);//重新定义组件位置【相对于整个显示器屏幕】和大小 x,y,w,h
-                sf.setLocationByPlatform(true);//让窗口系统自动决定窗口的位置
+                Toolkit tool = sf.getToolkit();
+                Image img = tool.getImage("C:\\Users\\zhangjianghao\\Downloads\\funface.jpg");//用滑稽表情做图标，嘿嘿
+                sf.setIconImage(img);
+                sf.setTitle("simpleFrame");
+
+                sf.setLocation(220, 110);//定义组件大小(宽度和高度)
+                sf.setBounds(440, 220, 500, 400);//定义组件位置和大小 x,y,w,h
+                sf.setLocationByPlatform(true);//让窗口系统根据底层平台自动决定窗口的位置
 
                 //会在控制台打印出true  类型为boolean的属性，获取方法由is开头
                 System.out.println(sf.isLocationByPlatform());
@@ -29,9 +34,9 @@ public class SimpleFrameTest {
 
 class SimpleFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 300;
-    private static final int DEFAULT_HIGHT = 200;
+    private static final int DEFAULT_HEIGHT = 200;
 
-    public SimpleFrame() {
-        setSize(DEFAULT_WIDTH, DEFAULT_HIGHT);
+    SimpleFrame() {
+        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
 }

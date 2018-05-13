@@ -3,6 +3,8 @@
 *.iml
 #忽略.idea文件夹下的所有文件
 .idea/
+#忽略compile文件夹下的所有文件
+compile/
 #忽略out文件夹下的所有文件
 out/
 

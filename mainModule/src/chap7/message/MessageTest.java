@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * 在组件中显示信息
  */
-public class Message {
+public class MessageTest {
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             @Override
@@ -29,7 +29,7 @@ class MessageFrame extends JFrame {
 }
 
 class MessageComponent extends JComponent {
-    public static final int MESSAGE_X = 275;
+    public static final int MESSAGE_X = 250;
     public static final int MESSAGE_Y = 200;
 
     private static final int DEFAULT_WIDTH = 600;

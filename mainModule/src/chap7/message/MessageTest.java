@@ -8,20 +8,17 @@ import java.awt.*;
  */
 public class MessageTest {
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                JFrame frame = new MessageFrame();
-                frame.setTitle("message component");
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.setVisible(true);
-            }
+        EventQueue.invokeLater(() -> {
+            JFrame frame = new MessageFrame();
+            frame.setTitle("message component");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setVisible(true);
         });
     }
 }
 
 class MessageFrame extends JFrame {
-    public MessageFrame() {
+    MessageFrame() {
         add(new MessageComponent());
         pack();//使用默认的首选大小，而不是自定义大小
     }
@@ -29,8 +26,8 @@ class MessageFrame extends JFrame {
 }
 
 class MessageComponent extends JComponent {
-    public static final int MESSAGE_X = 250;
-    public static final int MESSAGE_Y = 200;
+    private static final int MESSAGE_X = 250;
+    private static final int MESSAGE_Y = 200;
 
     private static final int DEFAULT_WIDTH = 600;
     private static final int DEFAULT_HEIGHT = 500;

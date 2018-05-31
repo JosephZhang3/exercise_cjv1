@@ -31,9 +31,9 @@ class SizedFrame extends JFrame {
         setSize(screenWidth / 2, screenHeight / 2);
         setLocationByPlatform(true);
 
-        //得到当前ClassPath的绝对URI路径，ClassPath即编译后的形成的文件夹的根路径
-        System.out.println(SizedFrame.class.getResource("/"));//file:/C:/git-repos/exercise_cjv1/compile/
-        System.out.println(ClassLoader.getSystemResource(""));//file:/C:/git-repos/exercise_cjv1/compile/
+        //得到当前ClassPath的绝对URI路径，ClassPath即项目编译后的形成的文件夹的根路径
+        System.out.println(SizedFrame.class.getResource("/"));//    file:/C:/git-repos/exercise_cjv1/compile/
+        System.out.println(ClassLoader.getSystemResource(""));//    file:/C:/git-repos/exercise_cjv1/compile/
 
         URL url = ClassLoader.getSystemResource("");
         Image img = new ImageIcon(url.getPath() + "chap7/funface.jpg").getImage();

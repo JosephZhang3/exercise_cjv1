@@ -16,8 +16,8 @@ public class SimpleFrameTest {
                 Toolkit tool = sf.getToolkit();
                 System.out.println(SimpleFrame.class.getResource("/") + "chap7/funface.jpg");//      file:/C:/git-repos/exercise_cjv1/compile/chap7/funface.jpg
 
-                String path = (SimpleFrame.class.getResource("/") + "chap7/funface.jpg").substring(6);
-                Image img = tool.getImage(path);//注意这里的图像文件的路径必须以操作系统文件系统的盘符开头，不能以  file:/  开头
+                String path = (SimpleFrame.class.getResource("/") + "chap7/funface.jpg").substring(6);//注意这里的图像文件的路径必须以操作系统文件系统的盘符开头，不能以  file:/  开头，要用substring干掉
+                Image img = tool.getImage(path);
                 sf.setIconImage(img);
                 sf.setTitle("simpleFrame");
 

@@ -2,6 +2,9 @@ package chap13.collection.map;
 
 import java.util.*;
 
+/**
+ * 使用泛型的HashMap
+ */
 public class HashMapWithGeneric {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();

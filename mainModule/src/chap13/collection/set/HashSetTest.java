@@ -1,13 +1,13 @@
 package chap13.collection.set;
 
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
 /**
  * Use a set ADT to print all unique words from System.in
  * 使用一种抽象数据结构set来打印出来自系统输入流的所有唯一的（不重复的）字符串，注意是无序的
+ * 可以把set理解成无序且不包含重复元素的list，当然了，它还没有索引
  */
 public class HashSetTest {
     public static void main(String[] args) {
@@ -24,9 +24,8 @@ public class HashSetTest {
             totalTime += callTime;
         }
 
-        Iterator<String> iter = words.iterator();
-        for (int i = 0; iter.hasNext(); i++) {
-            System.out.println(iter.next());
+        for (String word : words) {
+            System.out.println(word);
         }
 
         System.out.println("......");

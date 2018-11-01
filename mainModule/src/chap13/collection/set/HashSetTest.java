@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  * Use a set ADT to print all unique words from System.in
- * 使用一种抽象数据结构set来打印出来自系统输入流的所有唯一的（不重复的）单词
+ * 使用一种抽象数据结构set来打印出来自系统输入流的所有唯一的（不重复的）字符串，注意是无序的
  */
 public class HashSetTest {
     public static void main(String[] args) {

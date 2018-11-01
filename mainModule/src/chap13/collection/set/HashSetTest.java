@@ -15,9 +15,9 @@ public class HashSetTest {
         long totalTime = 0;
 
         Scanner in = new Scanner(System.in);
-        while (!in.hasNext("eof")) {
+        while (!in.hasNext("eof")) {//遇到输入字符串为eof时，结束监听控制台的输入
             String word = in.next();
-            System.out.println("输入的字符串为->" + word);
+            System.out.println("控制台输入的字符串为->" + word);
             long callTime = System.nanoTime();
             words.add(word);
             callTime = System.nanoTime() - callTime;

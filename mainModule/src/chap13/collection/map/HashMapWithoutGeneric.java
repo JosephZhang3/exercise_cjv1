@@ -116,7 +116,10 @@ public class HashMapWithoutGeneric {
                 return v;
             }
         });
-        //debugger模式下我们查看变量，确实被删除了
+        /**
+         * debugger模式下我们查看变量，"a"<->"hello" 这个键值对确实被删除了
+         * 说明针对Map.Entry的remove()操作是被支持的！
+         */
 
     }
 

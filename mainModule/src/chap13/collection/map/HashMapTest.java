@@ -2,7 +2,7 @@ package chap13.collection.map;
 
 import java.util.*;
 
-public class HashMapWithoutGeneric {
+public class HashMapTest {
     public static void main(String[] args) {
         Map<String, Object> fooHashMap = new HashMap<>();
 

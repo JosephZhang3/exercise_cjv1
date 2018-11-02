@@ -92,6 +92,8 @@ public class HashMapTest {
          * 运行至上面的add()方法时会报如下错误：
          * Exception in thread "main" java.lang.UnsupportedOperationException
          * 不支持这样的操作
+         * 原因是什么呢？嘿嘿
+         * 别被欺骗了，HashMap类的entrySet()方法返回的entriesSet只是一个视图，并不是真正的数据结构Set（集）！当然就不支持add()操作咯。
          */
 
 
@@ -118,7 +120,7 @@ public class HashMapTest {
         });
         /**
          * debugger模式下我们查看变量，"a"<->"hello" 这个键值对确实被删除了
-         * 说明针对Map.Entry的remove()操作是被支持的！
+         * 说明针对Map.Entry的remove()操作是被支持的！在这里，视图支持删除操作，但是不支持添加操作。
          */
 
     }

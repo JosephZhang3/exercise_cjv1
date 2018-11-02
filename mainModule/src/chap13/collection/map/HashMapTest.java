@@ -12,7 +12,7 @@ public class HashMapTest {
         fooHashMap.put("b", 90);
         fooHashMap.put("c", true);
         fooHashMap.put("d", 9.65f);
-        fooHashMap.put("e", new Book());
+        fooHashMap.put("e", new Book("CJV1", "Horstmann"));
         // 删除某项数据
         fooHashMap.remove("b");
         // 删除所有数据

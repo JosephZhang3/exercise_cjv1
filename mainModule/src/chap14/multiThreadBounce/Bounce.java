@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 /**
- * 小球弹跳程序
+ * 小球弹跳程序（这个类实现的是单个球的弹跳，未使用多线程）
  * Created by Jianghao Zhang on 2017/5/31.
  * Completed on 2018/11/03.
  */
@@ -22,14 +22,14 @@ public class Bounce {
 class BounceFrame extends JFrame {
     private BallComponent ballComp;
     private static final int STEPS = 1000;
-    private static final int DELAY = 3;
+    private static final int DELAY = 5;
 
     /**
      * 构造器
      * 构造带有组件的边框，用于显示正在反弹的球和“开始”“结束”按钮。
      */
     BounceFrame() {
-        setTitle("Bounce弹跳");
+        setTitle("单个小球弹跳");
 
         ballComp = new BallComponent();
         add(ballComp, BorderLayout.CENTER);

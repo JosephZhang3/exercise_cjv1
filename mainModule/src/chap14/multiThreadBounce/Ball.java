@@ -21,7 +21,7 @@ class Ball {
         x += dx;
         y += dy;
         if (x < bounds.getMinX()) {
-            x = bounds.getMaxX();
+            x = bounds.getMinX();
             dx = -dx;
         }
 
@@ -31,7 +31,7 @@ class Ball {
         }
 
         if (y < bounds.getMinY()) {
-            y = bounds.getMaxY();
+            y = bounds.getMinY();
             dy = -dy;
         }
 

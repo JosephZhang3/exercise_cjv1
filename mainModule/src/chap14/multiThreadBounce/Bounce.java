@@ -1,4 +1,4 @@
-package chap14.bounce;
+package chap14.multiThreadBounce;
 
 import javax.swing.*;
 

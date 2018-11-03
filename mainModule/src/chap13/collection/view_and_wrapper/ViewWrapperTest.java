@@ -61,7 +61,8 @@ public class ViewWrapperTest {
         bookNameList.add("JCP");
         bookNameList.add("ALGORITHM");
         bookNameList.add("INTERVIEW");
-        Set<String> bookNameSet = new HashSet<>(bookNameList);
+        bookNameList.add("INTERVIEW");
+        Set<String> bookNameSet = new HashSet<>(bookNameList);//将List对象转换为Set对象，如果List中有重复元素会被自动剔除
 
         List<String> otherBookNameList = new ArrayList<>();
         otherBookNameList.add("JQUERY");
@@ -87,11 +88,76 @@ public class ViewWrapperTest {
         testBatchOnSubView();
     }
 
-    private static void testBatchOnView(){
+    private static void testBatchOnView() {
+        Map<String, Teacher> teacherMap = new HashMap<>();
+        teacherMap.put("Fred", new Teacher(1, "Fred"));
+        teacherMap.put("Gary", new Teacher(2, "Gary"));
+        teacherMap.put("Kristin", new Teacher(3, "Kristin"));
+        teacherMap.put("Paul", new Teacher(4, "Paul"));
 
+        Set<String> retiredIDs = new HashSet<>();//所有已退休教师的的ID集
+        retiredIDs.add("Gary");
+        retiredIDs.add("Paul");
+
+        teacherMap.keySet().removeAll(retiredIDs);//从映射表HashMap产生的视图Set<String>集中移除所有的已退休教师
+        for (Map.Entry<String, Teacher> entry : teacherMap.entrySet()) {
+            System.out.println("未退休的教师包含：" + entry.getValue().getName());
+        }
     }
 
-    private static void testBatchOnSubView(){
+    private static void testBatchOnSubView() {
+        List<Teacher> teacherList = new ArrayList<>();
+        teacherList.add(new Teacher(0, "Fred"));
+        teacherList.add(new Teacher(1, "Gary"));
+        teacherList.add(new Teacher(2, "Kristin"));
+        teacherList.add(new Teacher(3, "Paul"));
+        teacherList.add(new Teacher(4, "Brooke"));
 
+        teacherList.subList(1, 4).clear();//通过操作子范围视图，来删除列表中索引位置为1到4的元素，注意，不包括位置为4的元素
+        System.out.print("删除第二个和第三个teacher后，剩下的teacers是：");
+        for (Teacher teacher : teacherList) {
+            System.out.print(teacher.getName() + "\t");
+        }
+        System.out.println();
+
+
+        List<Teacher> preTeacherList = new ArrayList<>();
+        preTeacherList.add(new Teacher(10, "little wang"));
+        preTeacherList.add(new Teacher(11, "little chen"));
+        preTeacherList.add(new Teacher(12, "little liu"));
+        preTeacherList.add(new Teacher(13, "little guo"));
+        teacherList.addAll(preTeacherList.subList(1, 3));//通过操作子范围视图，来往列表中添加元素，注意，subList()方法返回的是preTeacherList列表的一个子范围视图
+        System.out.print("添加助教列表中的索引位置为1和2的元素后，现在的teacer列表是：");
+        for (Teacher teacher : teacherList) {
+            System.out.print(teacher.getName() + "\t");
+        }
+        System.out.println();
+
+    }
+}
+
+class Teacher {
+    private int id;
+    private String name;
+
+    public Teacher(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -6,6 +6,8 @@ import java.util.Iterator;
 
 /**
  * 双端队列Deque的实现类，以数组方式实现
+ * 双端队列有两种实现方式，另一种是链表，具体的实现类是LinkedList类；是的，你没看错，因为LinkedList implements List<E>, Deque<E>
+ * <p>
  * ArrayDeque实现了Deque接口，而Deque接口又继承自Queue接口
  */
 public class ArrayDequeTest {

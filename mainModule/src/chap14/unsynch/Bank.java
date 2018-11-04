@@ -47,6 +47,11 @@ public class Bank {
          */
     }
 
+    /**
+     * 获取银行所有账户的总余额
+     *
+     * @return double
+     */
     public double getTotalBalance() {
         double sum = 0;
         for (double one : accounts) {
@@ -56,7 +61,7 @@ public class Bank {
     }
 
     /**
-     * 查看银行所有帐户的数量
+     * 获取银行所有帐户的数量
      *
      * @return count
      */

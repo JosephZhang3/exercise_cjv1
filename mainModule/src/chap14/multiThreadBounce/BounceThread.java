@@ -33,18 +33,19 @@ class BallRunnable implements Runnable {
         /**
          * 把小球移动和图像组件重绘放到线程的run()方法里
          */
-        for (int i = 1; i <= STEPS; i++) {
-            ball.move(ballComp.getBounds());
-            System.out.println("jumped\t" + i + "\ttimes");
-            //不像只有单个球在跳动，如果多个球同时跳动，那么就要完全擦除背景，把所有的球重绘一遍。
-            //否则，如果调用  ballComp.paint(ballComp.getGraphics());  屏幕上的球会抖动并且有残留
-            ballComp.repaint();
-            try {
+        try {
+            for (int i = 1; i <= STEPS; i++) {
+                ball.move(ballComp.getBounds());
+                System.out.println("jumped\t" + i + "\ttimes");
+                //不像只有单个球在跳动，如果多个球同时跳动，那么就要完全擦除背景，把所有的球重绘一遍。
+                //否则，如果调用  ballComp.paint(ballComp.getGraphics());  屏幕上的球会抖动并且有残留
+                ballComp.repaint();
+
                 Thread.sleep(DELAY);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
-        }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }//注意扩大try的范围，可以catch更多异常
     }
 }
 

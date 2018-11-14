@@ -1,14 +1,12 @@
-import java.time.Clock;
-
 /**
  * Created by Administrator on 2016/11/30.
- * just for test.
+ * just for src.
  * Project git root path:
  * 笔记本      /c/Users/Jianghao Zhang/IdeaProjects/exercise_cjv1  （空格不会被shell识别，这个坑...）
  */
 public class test {
     public static void main(String[] args) {
-        System.out.println("test class can be use!");
+        System.out.println("src class can be use!");
 
 /*
         String s2 = new StringBuilder("ja").append("va").toString();

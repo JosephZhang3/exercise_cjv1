@@ -35,7 +35,7 @@ public class ViewWrapperTest {
     private static void testArrayToList() {
         String[] wordArray = {"Java", "Collection", "wrapper"};
         List<String> wordList = Arrays.asList(wordArray);
-//        wordList.add("test add");//抛出异常UnsupportedOperationException
+//        wordList.add("src add");//抛出异常UnsupportedOperationException
     }
 
     /**

@@ -153,7 +153,7 @@ public class FirstSample {
 		//格式化输出（打印正数和负数的符号，添加分组分隔符，以小数点后两个字符的精度打印，浮点数）
 		System.out.printf("%+,.2f",10000.0/3.0);
 		//使用静态的String.format方法创建一个格式化的字符串，而不打印输出
-		String formatMessage = String.format("Hi,%s。next year,you will be %d", "zjh", 22);
+		String formatMessage = String.format("Hi,%s。next year,you will be %d", "com/zjh", 22);
 		System.out.println(formatMessage);
 
 		//使用完整的日期和时间格式打印当前的日期和时间

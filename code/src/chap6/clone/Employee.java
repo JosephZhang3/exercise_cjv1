@@ -17,7 +17,7 @@ public class Employee implements Cloneable {
         hireDay = new Date();
     }
 
-    public void setHireDay(int year, int month, int day) {
+    void setHireDay(int year, int month, int day) {
         GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
         hireDay = calendar.getTime();
     }

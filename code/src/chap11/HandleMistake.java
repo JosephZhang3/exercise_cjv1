@@ -32,8 +32,6 @@ public class HandleMistake {
 
     /**
      * IDEA live templates tips：输入psvm直接补全完整的main方法，输入fori或者foreach abbreviation 补全完整循环结构
-     *
-     * @param args
      */
     public static void main(String[] args) {
 //        errorInFinally();

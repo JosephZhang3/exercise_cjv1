@@ -1,5 +1,10 @@
 package chap11;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
 /**
  * 异常处理的任务是什么？
  * 将控制权从错误产生的地方转移给能够处理这种情况的错误处理器。
@@ -26,7 +31,9 @@ package chap11;
  * 在方法签名中throws。
  * <p>
  * <p>
- * 如果finally语句中依然存在错误异常，那么资源就无法关闭。怎么避免这种情况？
+ * 如果finally语句中在关闭资源时发生了错误异常，那么资源就无法关闭。怎么避免这种情况？
+ * 首先，这种情况下，原始的try块中的异常（如果有）会丢失，实际最后抛出的是finally块中的异常。
+ * 解决方案：使用带资源的try语句，即使关闭资源的close方法抛出异常，这个异常会“被抑制”然后被自动捕获。
  */
 public class HandleMistake {
 
@@ -36,6 +43,12 @@ public class HandleMistake {
     public static void main(String[] args) {
 //        errorInFinally();
         System.out.println(casesOfReturn());
+
+        try {
+            handleCloseResource();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -43,7 +56,7 @@ public class HandleMistake {
      */
     public static void errorInFinally() {
         try {
-            Class Obj = Class.forName("chap11.NONexist");
+            Class Obj = Class.forName("chap11.NonExist");
             assert !Obj.isArray();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -65,6 +78,20 @@ public class HandleMistake {
         } finally {
             System.out.println("执行了finally中的释放资源语句");
             return "finally的返回值";
+        }
+    }
+
+    /**
+     * 带资源的try语句，自动关闭资源，要求资源类实现AutoCloseable接口
+     *
+     * @throws FileNotFoundException 异常
+     */
+    private static void handleCloseResource() throws FileNotFoundException {//"C:\words.txt"
+        try (Scanner in = new Scanner(new FileInputStream("C:/words.txt"));
+             PrintWriter out = new PrintWriter("out.txt")
+        ) {
+            while (in.hasNext())
+                out.println(in.next());
         }
     }
 }

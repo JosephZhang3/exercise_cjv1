@@ -33,7 +33,7 @@ import java.util.Scanner;
  * <p>
  * 如果finally语句中在关闭资源时发生了错误异常，那么资源就无法关闭。怎么避免这种情况？
  * 首先，这种情况下，原始的try块中的异常（如果有）会丢失，实际最后抛出的是finally块中的异常。
- * 解决方案：使用带资源的try语句，即使关闭资源的close方法抛出异常，这个异常会“被抑制”然后被自动捕获。
+ * 解决方案：使用带资源的try语句，即使关闭资源的close方法抛出异常，这个异常会“被抑制”然后被自动捕获，不会覆盖try块中异常导致其丢失。
  */
 public class HandleMistake {
 
@@ -86,7 +86,7 @@ public class HandleMistake {
      *
      * @throws FileNotFoundException 异常
      */
-    private static void handleCloseResource() throws FileNotFoundException {//"C:\words.txt"
+    private static void handleCloseResource() throws FileNotFoundException {
         try (Scanner in = new Scanner(new FileInputStream("C:/words.txt"));
              PrintWriter out = new PrintWriter("out.txt")
         ) {

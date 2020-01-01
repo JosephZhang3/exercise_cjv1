@@ -1,4 +1,4 @@
-package chap11;
+package chap11.exception;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -56,7 +56,7 @@ public class HandleMistake {
      */
     public static void errorInFinally() {
         try {
-            Class Obj = Class.forName("chap11.NonExist");
+            Class Obj = Class.forName("chap11.exception.NonExist");
             assert !Obj.isArray();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

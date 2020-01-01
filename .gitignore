@@ -7,6 +7,7 @@
 compile/
 #忽略out文件夹下的所有文件
 out/
+target/
 
 
 

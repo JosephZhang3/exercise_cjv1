@@ -114,7 +114,7 @@ class WindowHandler extends StreamHandler {
         textArea.setEditable(false);
         frame.add(new JScrollPane(textArea));
         frame.setTitle("LogRecord TextArea");
-        frame.setSize(200, 200);
+        frame.setSize(1000, 500);
         frame.setFocusableWindowState(false);
         frame.setVisible(true);
 

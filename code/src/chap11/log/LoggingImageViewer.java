@@ -121,7 +121,7 @@ class WindowHandler extends StreamHandler {
         super.setOutputStream(new OutputStream() {
             @Override
             public void write(int b) {
-                //ignore
+                //never call
             }
 
             @Override

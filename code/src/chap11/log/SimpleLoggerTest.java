@@ -1,6 +1,5 @@
 package chap11.log;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SimpleLoggerTest {
@@ -13,8 +12,6 @@ public class SimpleLoggerTest {
 
         int returnInt = demoMethod("p1", "p2");
         System.out.println(returnInt);
-
-
     }
 
     /**
@@ -33,6 +30,7 @@ public class SimpleLoggerTest {
      */
     private static int demoMethod(String param1, String param2) {
         myLogger.entering("chap11.log.SimpleLoggerTest", "demoMethod", new Object[]{param1, param2});
+        myLogger.info("We can also use INFO level to output log record.");
         System.out.println("do sth...");
         System.out.println("do sth twice...");
         myLogger.exiting("chap11.log.SimpleLoggerTest", "demoMethod", 5);

@@ -23,7 +23,7 @@ public class LoggingImageViewer {
                 myOwnLogger.log(Level.SEVERE, "Can not create log file handler", e);
             }
 
-            //use multi thread way to handle log
+            //事件队列（事件子线程）
             EventQueue.invokeLater(() -> {
                 Handler windowHandler = new WindowHandler();
                 windowHandler.setLevel(Level.ALL);

@@ -126,7 +126,7 @@ class WindowHandler extends StreamHandler {
 
             @Override
             public void write(byte[] b, int off, int len) {
-                textArea.append(new String(b, off, len));//以off偏移量为起点，截取len长度
+                textArea.append(new String(b, off, len));//操作字节数组b，以off偏移量为起点，截取len长度
             }
         });
     }

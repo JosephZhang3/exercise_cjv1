@@ -1,0 +1,7 @@
+使用jmap命令获得堆转储文件，下面例子中的13288是进程ID
+
+% jmap -dump:format=b,file=/home/zjh/dumpfile20200105 13288
+
+然后使用jhat命令分析文件，生成一个查看分析结果的website，url是 http://localhost:7000
+
+% jhat /home/zjh/dumpfile20200105

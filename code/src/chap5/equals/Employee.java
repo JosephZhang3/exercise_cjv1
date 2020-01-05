@@ -12,6 +12,15 @@ public class Employee {
     private double salary;
     private Date hireDay;
 
+    /**
+     * 职员对象构造器
+     *
+     * @param n     姓名
+     * @param s     月薪
+     * @param year  入职年份
+     * @param month 入职月份
+     * @param day   入职日期 day of month
+     */
     public Employee(String n, double s, int year, int month, int day) {
         this.name = n;
         this.salary = s;

@@ -30,7 +30,7 @@ public class SimpleLoggerTest {
      */
     private static int demoMethod(String param1, String param2) {
         myLogger.entering("chap11.log.SimpleLoggerTest", "demoMethod", new Object[]{param1, param2});
-        myLogger.info("We can also use INFO level to output log record.");
+        myLogger.info("By default,We can use INFO level to output log record.");
         System.out.println("do sth...");
         System.out.println("do sth twice...");
         myLogger.exiting("chap11.log.SimpleLoggerTest", "demoMethod", 5);

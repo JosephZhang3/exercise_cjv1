@@ -1,9 +1,11 @@
 package chap14.unsynch;
 
+import java.util.Arrays;
+
 /**
  * 抽象出的银行类
  */
-public class Bank {
+class Bank {
     private double[] accounts;//存放帐户余额的数组
 
     /**
@@ -12,11 +14,9 @@ public class Bank {
      * @param n              帐户数量
      * @param initialBalance 为每个帐户设置的初始余额
      */
-    public Bank(int n, double initialBalance) {
+    Bank(int n, double initialBalance) {
         accounts = new double[n];
-        for (int i = 0; i < accounts.length; i++) {
-            accounts[i] = initialBalance;
-        }
+        Arrays.fill(accounts, initialBalance);
     }
 
     /**
@@ -26,7 +26,7 @@ public class Bank {
      * @param to     转账去向目标帐户的索引
      * @param amount 转账金额
      */
-    public void transfer(int from, int to, double amount) {
+    void transfer(int from, int to, double amount) {
         if (accounts[from] < amount) {
 //            System.out.println("来源帐户余额不足以转账");
             return;
@@ -52,7 +52,7 @@ public class Bank {
      *
      * @return double
      */
-    public double getTotalBalance() {
+    private double getTotalBalance() {
         double sum = 0;
         for (double one : accounts) {
             sum += one;
@@ -65,7 +65,7 @@ public class Bank {
      *
      * @return count
      */
-    public int size() {
+    int size() {
         return accounts.length;
     }
 }

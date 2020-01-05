@@ -4,7 +4,7 @@
  * Project git root path:
  * 笔记本      /c/Users/Jianghao Zhang/IdeaProjects/exercise_cjv1  （空格不会被shell识别，这个坑...）
  */
-public class test {
+public class J8Test {
     public static void main(String[] args) {
         System.out.println("src class can be use!");
 

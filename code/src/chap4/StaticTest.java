@@ -78,7 +78,7 @@ class Worker {
         nextId++;
     }
 
-    //unit test.
+    //unit J8Test.
     public static void main(String[] args) {
         Worker e = new Worker("Harry", 5000);
         System.out.println(e.getName() + "  " + e.getSalary());

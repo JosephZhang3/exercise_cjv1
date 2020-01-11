@@ -9,28 +9,28 @@ import java.util.function.Predicate;
  * Created by Jianghao Zhang on 2017/6/1.
  */
 public class LambdaTest {
-    public static void main(String[] args) {
-        //使用lambda表达式替换runnable匿名类
-        new Thread(() -> System.out.println("--")).start();
+	public static void main(String[] args) {
+		//使用lambda表达式替换runnable匿名类
+		new Thread(() -> System.out.println("--")).start();
 
-        //简化集合迭代
-        List<String> features = Arrays.asList("lambda", "stream api", "date and time api");
-        features.forEach(System.out::println);//这里使用了方法引用（method reference caller object 方法引用调用它的主调对象），双冒号操作符
+		//简化集合迭代这里双冒号操作符使用了方法引用（method reference caller object 方法引用调用它的主调对象）
+		List<String> features = Arrays.asList("lambda", "stream api", "date and time api");
+		//
+		features.forEach(System.out::println);
 
-        //函数式接口，将函数作为参数传递
-        List<String> languages = Arrays.asList("C", "C++", "C#", "Java", "JavaScript", "python");
-        System.out.print("打印以c开头的语言名");
-        filter(languages, (String str) -> str.startsWith("C"));
-        System.out.println();
-        System.out.print("打印所有的语言名");
-        filter(languages, (str) -> true);
+		//函数式接口，将函数作为参数传递
+		List<String> languages = Arrays.asList("C", "C++", "C#", "Java", "JavaScript", "python");
+		System.out.print("打印以c开头，以+结尾的语言名\t\t");
+		filter(languages, (String str) -> str.startsWith("C"), (String str) -> str.endsWith("+"));
+		System.out.println();
 
+		System.out.print("打印所有的语言名\t\t");
+		filter(languages, (str) -> true, (str) -> true);
 
-    }
+	}
 
-    private static void filter(List<String> names, Predicate<String> conditionFunc) {
-        names.stream().filter((name) -> (conditionFunc.test(name))).forEach((name) ->
-                System.out.print(name + " ")
-        );
-    }
+	private static void filter(List<String> names, Predicate<String> conditionFunc,
+			Predicate<String> conditionFuncTwo) {
+		names.stream().filter(conditionFunc).filter(conditionFuncTwo).forEach((name) -> System.out.print(name + " "));
+	}
 }

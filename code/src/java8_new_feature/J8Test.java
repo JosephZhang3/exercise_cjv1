@@ -1,3 +1,5 @@
+package java8_new_feature;
+
 /**
  * Created by Administrator on 2016/11/30.
  * just for src.

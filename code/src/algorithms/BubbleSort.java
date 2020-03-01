@@ -1,7 +1,7 @@
-package src;
+package algorithms;
 
 /**
- * 冒泡排序，手写精简代码
+ * 冒泡排序，最精简代码
  */
 public class BubbleSort {
     public static void main(String[] args) {

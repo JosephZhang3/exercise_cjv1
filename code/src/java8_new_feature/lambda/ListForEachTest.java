@@ -22,7 +22,14 @@ public class ListForEachTest {
         参见  java.lang.Iterable.forEach
         */
         numList.forEach(i -> {
-            System.out.println("current iterate num is " + i);
+            System.out.println(i);
         });
+
+        /*
+         * for-each循环结构是外部迭代方式，而foreach方法是内部迭代方式，
+         * lambda expression , method reference , constructor 都可以作为参数
+         * 下面代码就是把 System.out.println() 方法当作了参数传递
+         */
+        numList.forEach(System.out::println);
     }
 }

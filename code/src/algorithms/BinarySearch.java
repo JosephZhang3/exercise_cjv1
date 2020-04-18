@@ -1,4 +1,4 @@
-package src;
+package algorithms;
 
 /**
  * 二分查找，手写精简代码

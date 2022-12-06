@@ -26,9 +26,9 @@ public class ProxyTest {
               把追踪处理器handler与Integer实现的接口Comparable.class绑定，目的就是每次调用Integer类型对象的compareTo方法时，都让绑定的追踪处理器做一些事情。
               (实际上，在调用Integer类型对象的toString方法或者很多其他方法时，追踪处理器也同样做了一些事情)
              */
-            InvocationHandler handler = new TraceHandler(value);
+            InvocationHandler customHandler = new TraceHandler(value);
             // 3个参数：类加载器null表示默认、被代理类自身已经实现的interface class的数组 此处是 []{compare.class}、调用处理器
-            Object proxy = Proxy.newProxyInstance(null, new Class[]{Comparable.class}, handler);
+            Object proxy = Proxy.newProxyInstance(null, new Class[]{Comparable.class}, customHandler);
             // debug查看代理类型proxyClass的内部构造，实际上只有两个属性 name:com.sun.proxy.$Proxy0 和 reflectionData
             Class proxyClass = Proxy.getProxyClass(null, new Class[]{Comparable.class});
             elements[i] = proxy;//代理对象的类型是Object
